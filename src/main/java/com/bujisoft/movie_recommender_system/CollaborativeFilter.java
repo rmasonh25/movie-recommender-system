@@ -4,19 +4,19 @@
  * Copyright (c) 2025 Bujisoft
  * Author: Robert Hendricks
  * File: CollaborativeFilter.java
- * Created on: 2025-09-05 12:29
- * Last modified: 2025-09-05 12:29
+ * Created on: 2025-09-05 12:33
+ * Last modified: 2025-09-05 12:33
  *
  */
 
 package com.bujisoft.movie_recommender_system;
 
 
-import org.springframework.context.annotation.Primary;
+//import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Component
-@Primary
+//@Primary
 public class CollaborativeFilter implements Filter{
     @Override
     public String[] getRecommendations(String movie) {

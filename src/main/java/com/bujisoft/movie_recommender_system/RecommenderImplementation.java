@@ -4,8 +4,8 @@
  * Copyright (c) 2025 Bujisoft
  * Author: Robert Hendricks
  * File: RecommenderImplementation.java
- * Created on: 2025-09-05 12:23
- * Last modified: 2025-09-05 12:23
+ * Created on: 2025-09-05 12:37
+ * Last modified: 2025-09-05 12:37
  *
  */
 
@@ -19,18 +19,19 @@ import org.springframework.stereotype.Component;
 public class RecommenderImplementation {
 
     @Autowired
-        private Filter filter;
-
-        public RecommenderImplementation(Filter filter) {
-            super();
-            this.filter = filter;
-
-    }
+        private Filter contentBasedFilter;
 
     // use filter to get recommendations
-    public String[] recommendMovies(String movie) {
-        System.out.println("Name of filter to use:"  + filter + "\n");
-        String[] results = filter.getRecommendations("Finding Dory");
+    public String [] recommendMovies(String movie) {
+        System.out.println("Name of filter to use:"  + contentBasedFilter + "\n");
+        String[] results = contentBasedFilter.getRecommendations("Finding Dory");
         return results;
     }
-}
+
+    //public RecommenderImplementation(Filter filter) {
+            //super();
+           //this.filter = filter;
+
+    }
+
+
