@@ -4,22 +4,26 @@
  * Copyright (c) 2025 Bujisoft
  * Author: Robert Hendricks
  * File: RecommenderImplementation.java
- * Created on: 2025-09-05 11:40
- * Last modified: 2025-09-05 11:40
+ * Created on: 2025-09-05 11:56
+ * Last modified: 2025-09-05 11:56
  *
  */
 
 package com.bujisoft.movie_recommender_system;
 
 public class RecommenderImplementation {
+        private Filter filter;
+
+        public RecommenderImplementation(Filter filter) {
+            super();
+            this.filter = filter;
+
+    }
+
+    // use filter to get recommendations
     public String[] recommendMovies(String movie) {
-        // use content based filter to find movies
-        // change filter to collaborative filter to find movies
-        /// ContentBasedFilter filter = new ContentBasedFilter();
-        CollaborativeFilter filter = new CollaborativeFilter();
+        System.out.println("Name of filter to use:"  + filter + "\n");
         String[] results = filter.getRecommendations("Finding Dory");
-        //return the results
         return results;
-       // return new String[] {"M1", "M2", "M3"};
     }
 }
