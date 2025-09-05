@@ -4,8 +4,8 @@
  * Copyright (c) 2025 Bujisoft
  * Author: Robert Hendricks
  * File: MovieRecommenderSystemApplication.java
- * Created on: 2025-09-05 12:25
- * Last modified: 2025-09-05 12:25
+ * Created on: 2025-09-05 15:18
+ * Last modified: 2025-09-05 15:18
  *
  */
 
@@ -22,10 +22,12 @@ public class MovieRecommenderSystemApplication {
 
 	public static void main(String[] args) {
 		ApplicationContext appContext =SpringApplication.run(MovieRecommenderSystemApplication.class, args);
+		//Recommends Implementation injects dependecy using constructor
+		System.out.println("Constructor injection in RecommenderImplementation class");
 		// passing name of filter as constructor argument
-		RecommenderImplementation recommender = appContext.getBean(RecommenderImplementation.class);
+		RecommenderImplementation2 recommender2 = appContext.getBean(RecommenderImplementation2.class);
 		// call method to get recommendations
-		String[] result = recommender.recommendMovies("Finding Dory");
+		String[] result = recommender2.recommendMovies("Finding Dory");
 		// display result
 		System.out.println(Arrays.toString(result));
 
