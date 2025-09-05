@@ -4,14 +4,21 @@
  * Copyright (c) 2025 Bujisoft
  * Author: Robert Hendricks
  * File: RecommenderImplementation.java
- * Created on: 2025-09-05 11:56
- * Last modified: 2025-09-05 11:56
+ * Created on: 2025-09-05 12:23
+ * Last modified: 2025-09-05 12:23
  *
  */
 
 package com.bujisoft.movie_recommender_system;
 
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class RecommenderImplementation {
+
+    @Autowired
         private Filter filter;
 
         public RecommenderImplementation(Filter filter) {
